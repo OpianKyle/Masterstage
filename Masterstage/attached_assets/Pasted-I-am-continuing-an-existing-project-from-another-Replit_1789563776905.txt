@@ -1,0 +1,130 @@
+I am continuing an existing project from another Replit account.
+
+I need you to take over the project and finish the Whop integration without starting the application over or breaking any existing functionality.
+
+IMPORTANT CONTEXT:
+
+The previous Replit agent was working on connecting my application to Whop so that users can log in and their Whop membership/product access can be verified.
+
+The previous agent determined that the problem was related to the Whop API connection/permissions.
+
+I checked my Whop Developer Dashboard and currently it shows:
+
+- Company API keys: NONE
+- Apps: NONE
+- Webhooks: NONE
+
+So the Whop API connection has NOT been created yet.
+
+WHAT I NEED YOU TO DO:
+
+1. First inspect the entire existing codebase.
+2. Understand the current authentication system, user system, database, frontend and backend before changing anything.
+3. Do NOT rebuild the application from scratch.
+4. Do NOT remove or replace the existing authentication system unless absolutely necessary.
+5. Identify exactly how the application currently determines whether a logged-in user has access to the Personal and Reseller products/plans.
+6. Identify all existing Whop-related code, environment variables, API routes, middleware and access checks.
+7. Tell me exactly what Whop credentials/configuration the application requires.
+8. Help me create the correct Whop integration.
+
+WHOP ACCESS REQUIREMENTS:
+
+The application needs to be able to verify Whop membership/access.
+
+The relevant Whop API permissions currently documented for membership retrieval/listing are:
+
+- member:basic:read
+- member:email:read
+
+Whop's current documentation confirms that retrieving memberships requires these permissions.
+
+Do not assume the old Replit instructions are still correct. Verify the current Whop API implementation against the current Whop documentation.
+
+SECURITY:
+
+NEVER ask me to paste a Whop API key into the chat.
+
+NEVER put a Whop API key directly into frontend/client-side code.
+
+NEVER hard-code the API key into the repository.
+
+Use Replit Secrets/environment variables for credentials.
+
+The Whop API key must only be used server-side.
+
+If an existing secret is present, inspect the code to determine what variable name it expects, but do not expose the secret value.
+
+WHOP SETUP:
+
+If the correct approach is a Company API key:
+
+- Guide me through creating it in Whop.
+- Tell me exactly which permissions are required.
+- Tell me exactly where I should enter the secret in Replit.
+- Do not ask me to send the actual key to you.
+
+If the correct approach is a Whop App/API key instead of a Company API key, explain why and implement the correct approach.
+
+ACCESS LOGIC:
+
+The application has Personal and Reseller access checks.
+
+Preserve the existing product/plan IDs and access logic if they already exist in the code.
+
+Do not invent product IDs.
+
+If product IDs or plan IDs are missing, identify exactly which values I need to provide/configure.
+
+The final system should:
+
+- authenticate the user
+- identify the authenticated user
+- securely check their Whop membership/access server-side
+- determine whether they have Personal access
+- determine whether they have Reseller access
+- return the correct access status to the frontend
+- prevent users from bypassing the access check from the browser
+
+ERROR HANDLING:
+
+Handle these separately:
+
+- missing Whop credentials
+- invalid API key
+- insufficient permissions / 403
+- user not found
+- user found but no active membership
+- expired/cancelled membership
+- Whop API unavailable
+- missing product/plan configuration
+
+Do not simply return "access denied" for every error.
+
+DEVELOPMENT PROCESS:
+
+Before making major changes, inspect the existing project and explain:
+
+1. Current authentication method
+2. Current database
+3. Current Whop integration
+4. Current Personal access check
+5. Current Reseller access check
+6. Missing configuration
+7. Exact changes you recommend
+
+Then implement the changes.
+
+After implementation:
+
+- run the project
+- test the authentication flow
+- test the Whop API connection
+- test Personal access
+- test Reseller access
+- test a user with no access
+- test invalid/missing credentials
+- check for TypeScript/build/runtime errors
+
+Do not claim the Whop connection works unless you actually verify it.
+
+Most importantly: do not start by asking me for an API key. First inspect the project and tell me exactly what needs to be configured in Whop and Replit.

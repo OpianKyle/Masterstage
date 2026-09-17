@@ -1,0 +1,2 @@
+- [Manual Whop verification](whop-manual-integration.md) — direct membership checks need member read permissions; keep the API key server-only.
+- [Artifact workflow ports](artifact-workflow-ports.md) — managed artifact workflows can occupy service ports and must be stopped before a custom workflow uses them.

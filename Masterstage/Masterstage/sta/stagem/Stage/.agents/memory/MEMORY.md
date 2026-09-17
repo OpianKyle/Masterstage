@@ -1,0 +1,1 @@
+- [Whop access gate](whop-access-gate.md) — only a server-confirmed Whop product access response can unlock member content.

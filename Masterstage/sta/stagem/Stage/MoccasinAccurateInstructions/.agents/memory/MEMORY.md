@@ -1,0 +1,1 @@
+- [Deployment root paths](deployment-root-paths.md) — publish commands already run from the outer Stage-Master root; avoid entering the duplicate nested clone.

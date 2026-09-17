@@ -1,0 +1,92 @@
+User@DESKTOP-PD7JMIO MINGW64 ~
+$ ssh -i xneeelo-key.pem ubuntu@154.65.100.190
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-173-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Sep 17 07:38:31 UTC 2026
+
+  System load:           0.0
+  Usage of /:            39.4% of 9.51GB
+  Memory usage:          31%
+  Swap usage:            0%
+  Processes:             99
+  Users logged in:       1
+  IPv4 address for ens3: 154.65.100.190
+  IPv6 address for ens3: 2c0f:fce8:4000:4000:0:1:0:275
+
+  => There is 1 zombie process.
+
+ * Canonical Workshop gives developers fast, composable, reproducible, and
+ubuntu@digital-junkies:~$ nments that are perfect for agentic workflows.
+ubuntu@digital-junkies:~$
+ubuntu@digital-junkies:~$ shop
+ubuntu@digital-junkies:~$
+ubuntu@digital-junkies:~$ sudo -u stagemaster -H bash -lc '
+cd /var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master &&
+/usr/bin/pnpm --filter @workspace/stage-master run build
+'
+
+sudo systemctl restart stagemaster-api
+sudo systemctl reload nginx
+
+> @workspace/stage-master@0.0.0 build /var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master/artifacts/stage-master
+> vite build --config vite.config.ts
+
+NODE_ENV=production is not supported in the .env file. Only NODE_ENV=development is supported to create a development build of your project. If you need to set process.env.NODE_ENV, you can set it in the Vite config instead.
+vite v7.3.6 building client environment for production...
+✓ 1766 modules transformed.
+dist/public/index.html                   1.38 kB │ gzip:   0.54 kB
+dist/public/assets/index-CuoTdqq2.css  119.66 kB │ gzip:  20.19 kB
+dist/public/assets/index-CAxJd0aA.js   358.52 kB │ gzip: 103.99 kB
+✓ built in 3.78s
+ubuntu@digital-junkies:~$ sudo nano /var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master/artifacts/stage-master/.env.production
+ubuntu@digital-junkies:~$ sudo -u stagemaster -H bash -lc '
+cd /var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master &&
+/usr/bin/pnpm --filter @workspace/stage-master run build
+'
+
+sudo systemctl restart stagemaster-api
+sudo systemctl reload nginx
+
+> @workspace/stage-master@0.0.0 build /var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master/artifacts/stage-master
+> vite build --config vite.config.ts
+
+NODE_ENV=production is not supported in the .env file. Only NODE_ENV=development is supported to create a development build of your project. If you need to set process.env.NODE_ENV, you can set it in the Vite config instead.
+vite v7.3.6 building client environment for production...
+✓ 1766 modules transformed.
+dist/public/index.html                   1.38 kB │ gzip:   0.54 kB
+dist/public/assets/index-CuoTdqq2.css  119.66 kB │ gzip:  20.19 kB
+dist/public/assets/index-CAxJd0aA.js   358.52 kB │ gzip: 103.99 kB
+✓ built in 3.68s
+ubuntu@digital-junkies:~$ sudo nano /var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master/artifacts/stage-master/.env.production      ubuntu@digital-junkies:~$ APP=/var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master
+FRONTEND_ENV="$APP/artifacts/stage-master/.env.production"
+
+sudo touch "$FRONTEND_ENV"
+ubuntu@digital-junkies:~$ sudo systemctl restart stagemaster-api
+sudo systemctl status stagemaster-api --no-pager
+● stagemaster-api.service - StageMaster API
+     Loaded: loaded (/etc/systemd/system/stagemaster-api.service; enabled; vendor preset: enabled)kies:~$ sudo awk -F= '
+     Active: active (running) since Thu 2026-09-17 08:48:16 UTC; 29ms ago
+   Main PID: 75359 (MainThread)
+ubuntu@digital-junkies:~$ sudo systemctl restart stagemaster-api
+ubuntu@digital-junkies:~$ sudo systemctl status stagemaster-api --no-pager
+● stagemaster-api.service - StageMaster API
+     Loaded: loaded (/etc/systemd/system/stagemaster-api.service; enabled; vendo
+     Active: active (running) since Thu 2026-09-17 09:02:22 UTC; 3s ago
+   Main PID: 75418 (MainThread)
+      Tasks: 11 (limit: 1098)es systemd[1]: stagemaster-api.service: Deactiv…ly.
+     Memory: 28.6Mgital-junkies systemd[1]: Stopped StageMaster API.
+        CPU: 103msgital-junkies systemd[1]: Started StageMaster API.
+     CGroup: /system.slice/stagemaster-api.servicen full.
+             └─75418 /usr/bin/node /var/www/stagemaster/sta/stagem/Stage/Moccasi
+/^CLERK_PUBLISHABLE_KEY=/ {print "API publishable:", ($2 ~ /^pk_live_/ ? "live" Sep 17 09:02:22 digital-junkies systemd[1]: Started StageMaster API.
+Sep 17 09:02:22 digital-junkies node[75418]: {"level":30,"time":1789635742323,"pubuntu@digital-junkies:~$ sudo awk -F= '
+/^CLERK_PUBLISHABLE_KEY=/ {print "API publishable:", ($2 ~ /^pk_live_/ ? "live"
+/^CLERK_SECRET_KEY=/ {print "API secret:", ($2 ~ /^sk_live_/ ? "live" : "not sk_
+' /etc/stagemaster/stagemaster.env/api/healthz
+API secret: not sk_live
+API publishable: not pk_live
+ubuntu@digital-junkies:~$

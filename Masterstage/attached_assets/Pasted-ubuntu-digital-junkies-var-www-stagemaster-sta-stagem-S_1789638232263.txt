@@ -1,0 +1,33 @@
+ubuntu@digital-junkies:/var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master$ cd /var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master
+
+sudo -u stagemaster -H bash -lc '
+/usr/bin/pnpm --filter @workspace/stage-master run build
+'
+
+sudo systemctl restart stagemaster-api
+sudo systemctl reload nginx
+
+> @workspace/stage-master@0.0.0 build /var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master/artifacts/stage-master
+> vite build --config vite.config.ts
+
+NODE_ENV=production is not supported in the .env file. Only NODE_ENV=development is supported to create a development build of your project. If you need to set process.env.NODE_ENV, you can set it in the Vite config instead.
+vite v7.3.6 building client environment for production...
+✓ 1766 modules transformed.
+dist/public/index.html                   1.38 kB │ gzip:   0.54 kB
+dist/public/assets/index-CuoTdqq2.css  119.66 kB │ gzip:  20.19 kB
+dist/public/assets/index-BxrwCsEE.js   358.43 kB │ gzip: 103.94 kB
+✓ built in 4.09s
+ubuntu@digital-junkies:/var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master$ sudo awk -F= '                                          /^CLERK_PUBLISHABLE_KEY=/ {print "API publishable:", ($2 ~ /^pk_live_/ ? "live" : "not pk_live")}
+/^CLERK_SECRET_KEY=/ {print "API secret:", ($2 ~ /^sk_live_/ ? "live" : "not sk_live")}
+' /etc/stagemaster/stagemaster.env
+API secret: not sk_live
+API publishable: not pk_live
+ubuntu@digital-junkies:/var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master$ https://stagemaster.co.uk/api/healthz
+-bash: https://stagemaster.co.uk/api/healthz: No such file or directory
+ubuntu@digital-junkies:/var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master$ sudo awk -F= '
+/^CLERK_PUBLISHABLE_KEY=/ {print "API publishable:", ($2 ~ /^pk_live_/ ? "live" : "not pk_live")}
+/^CLERK_SECRET_KEY=/ {print "API secret:", ($2 ~ /^sk_live_/ ? "live" : "not sk_live")}
+' /etc/stagemaster/stagemaster.env
+API secret: not sk_live
+API publishable: not pk_live
+ubuntu@digital-junkies:/var/www/stagemaster/sta/stagem/Stage/MoccasinAccurateInstructions/Stage-Master$

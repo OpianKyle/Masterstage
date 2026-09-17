@@ -1,0 +1,2 @@
+- [Protected member content](protected-member-content.md) — paid assets and full lesson text must stay server-side and pass Clerk plus Whop checks per request.
+- [Whop access permissions](whop-connector-permissions.md) — a healthy Whop connection may still lack customer/member-read permission needed for email-based access checks.

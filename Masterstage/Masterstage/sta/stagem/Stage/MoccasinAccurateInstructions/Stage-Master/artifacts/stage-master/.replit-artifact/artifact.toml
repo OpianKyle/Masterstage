@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Stage Master"
+description = "A cinematic, image-led sales site for Stage Master, a public-speaking course for online entrepreneurs with digital course access, workbook materials, and Whop-ready purchase paths."
+version = "1.0.0"
+id = "artifacts/stage-master"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 26217
+
+[services.development]
+run = "pnpm --filter @workspace/stage-master run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/stage-master", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/stage-master/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "26217"
+BASE_PATH = "/"
