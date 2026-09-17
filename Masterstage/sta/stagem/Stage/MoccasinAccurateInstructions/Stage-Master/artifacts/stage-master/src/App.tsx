@@ -82,6 +82,10 @@ function signInPath() {
   return `${basePath}/sign-in`;
 }
 
+function signUpPath() {
+  return `${basePath}/sign-up`;
+}
+
 function scrollToId(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -136,9 +140,13 @@ function LandingPage() {
            <a href={signInPath()} data-testid="link-member-login" className="hidden text-[10px] font-bold uppercase tracking-[.16em] text-[var(--gold)] transition hover:text-white lg:block">
              Member login
            </a>
-          <button onClick={() => setMenuOpen(!menuOpen)} data-testid="button-menu" className="md:hidden" aria-label={menuOpen ? 'Close menu' : 'Open menu'}>
-            {menuOpen ? <X size={23} /> : <Menu size={23} />}
-          </button>
+           <div className="flex items-center gap-3 md:hidden">
+             <a href={signInPath()} data-testid="link-mobile-sign-in" className="text-[10px] font-bold uppercase tracking-[.12em] text-[var(--gold)]">Sign in</a>
+             <a href={signUpPath()} data-testid="link-mobile-sign-up" className="text-[10px] font-bold uppercase tracking-[.12em] text-white">Sign up</a>
+             <button onClick={() => setMenuOpen(!menuOpen)} data-testid="button-menu" className="ml-1" aria-label={menuOpen ? 'Close menu' : 'Open menu'}>
+               {menuOpen ? <X size={23} /> : <Menu size={23} />}
+             </button>
+           </div>
         </div>
         {menuOpen && <div className="border-t border-white/10 bg-[var(--navy)] px-6 py-5 md:hidden">
           <div className="flex flex-col gap-5 text-xs font-semibold uppercase tracking-[.18em]">
@@ -157,7 +165,7 @@ function LandingPage() {
           <div className="mx-auto w-full max-w-[1380px] px-6 lg:px-12">
             <div className="max-w-3xl">
               <div className="reveal mb-7 inline-flex items-center gap-3 rounded-full border border-[var(--gold)]/40 bg-white/10 px-4 py-2 text-[10px] font-bold tracking-[.08em] text-[var(--gold)]"><span className="h-2 w-2 rounded-full bg-[var(--green)]" />Keynotes · YouTube · Masterminds — one skill unlocks all three</div>
-              <h1 className="reveal reveal-delay-1 display-font max-w-4xl font-extrabold sm:text-7xl lg:text-[6.4rem] is-visible text-[80px]">Are You Struggling With Public Speaking? <span className="text-[var(--gold)]">Turn Your Voice Into A High-Ticket Asset.</span></h1>
+               <h1 className="reveal reveal-delay-1 display-font max-w-4xl text-[clamp(2.75rem,5.5vw,4.75rem)] font-extrabold leading-[.96] is-visible">Are You Struggling With Public Speaking? <span className="text-[var(--gold)]">Turn Your Voice Into A High-Ticket Asset.</span></h1>
               <p className="reveal reveal-delay-2 mt-8 max-w-xl text-lg leading-relaxed text-slate-200 sm:text-xl">Improve your public speaking with <strong>12 proven NLP strategies</strong> — then monetise your expertise through keynote speaking, stronger YouTube content and exclusive masterminds.</p>
               <ul className="reveal reveal-delay-2 mt-6 max-w-xl space-y-2 text-sm leading-6 text-slate-200">
                 <li className="flex gap-3"><span className="text-[var(--gold)]">•</span><span><strong>Average client on our courses lands $15k gigs</strong> in speaking & mastermind revenue.</span></li>
