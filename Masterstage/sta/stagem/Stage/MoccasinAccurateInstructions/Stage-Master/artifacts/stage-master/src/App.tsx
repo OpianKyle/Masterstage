@@ -362,7 +362,7 @@ function LandingPage() {
             <div className="mx-auto mt-14 grid max-w-4xl gap-5 lg:grid-cols-2">
               <div className="pricing-card group reveal reveal-delay-1 overflow-hidden border border-white/20 bg-white/[.06] p-7 sm:p-9">
                  <div className="relative -mx-7 -mt-7 mb-7 h-44 overflow-hidden sm:-mx-9 sm:-mt-9 sm:h-48">
-                   <img src="/stage-master-workbook.png" alt="StageMaster workbook and speaking cue cards" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                   <img src="/stage-master-personal-digital-product.png" alt="StageMaster online course dashboard, workbook and lesson materials" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/85 via-[var(--navy)]/10 to-transparent" />
                    <span className="absolute bottom-4 left-5 text-[9px] font-bold uppercase tracking-[.18em] text-white">Course + workbook included</span>
                  </div>
@@ -374,7 +374,7 @@ function LandingPage() {
               <div className="pricing-card group reveal reveal-delay-2 relative overflow-hidden border-2 border-[var(--gold)] bg-[#f5f1e7] p-7 text-[var(--navy)] sm:p-9">
                 <span className="absolute right-6 top-0 -translate-y-1/2 bg-[var(--gold)] px-3 py-1.5 text-[9px] font-bold uppercase tracking-[.18em]">Most popular — it can pay for itself</span>
                  <div className="relative -mx-7 -mt-7 mb-7 h-44 overflow-hidden sm:-mx-9 sm:-mt-9 sm:h-48">
-                   <img src="/stage-master-reseller.jpg" alt="Laptop and ready-to-sell reseller materials" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                   <img src="/stage-master-reseller-digital-product.png" alt="StageMaster digital sales page, presentation deck and reseller toolkit" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/85 via-[var(--navy)]/10 to-transparent" />
                    <span className="absolute bottom-4 left-5 text-[9px] font-bold uppercase tracking-[.18em] text-white">Course + sell-it-yourself toolkit</span>
                  </div>
