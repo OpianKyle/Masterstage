@@ -360,14 +360,24 @@ function LandingPage() {
               </div>)}
             </div>
             <div className="mx-auto mt-14 grid max-w-4xl gap-5 lg:grid-cols-2">
-              <div className="pricing-card reveal reveal-delay-1 border border-white/20 bg-white/[.06] p-7 sm:p-9">
+              <div className="pricing-card group reveal reveal-delay-1 overflow-hidden border border-white/20 bg-white/[.06] p-7 sm:p-9">
+                 <div className="relative -mx-7 -mt-7 mb-7 h-44 overflow-hidden sm:-mx-9 sm:-mt-9 sm:h-48">
+                   <img src="/stage-master-workbook.png" alt="StageMaster workbook and speaking cue cards" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/85 via-[var(--navy)]/10 to-transparent" />
+                   <span className="absolute bottom-4 left-5 text-[9px] font-bold uppercase tracking-[.18em] text-white">Course + workbook included</span>
+                 </div>
                 <div className="flex items-start justify-between"><div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-slate-300">For the founder who’s done sounding unsure</p><h3 className="mt-4 text-2xl font-bold">Personal Use</h3></div><Sparkles className="text-[var(--gold)]" size={21} /></div>
                 <div className="mt-7 flex items-end gap-2"><span className="text-6xl font-extrabold">$47</span><span className="pb-2 text-sm text-slate-400">one-time, not monthly</span></div>
                 <ul className="mt-7 space-y-3 border-t border-white/15 pt-6 text-sm text-slate-200">{['Complete 7-module course PDF (40+ pages)', 'All 12 NLP patterns — named & drilled', '7 narrated video lessons', 'StageMaster Workbook', '6 quick-reference cheat sheets', '16-slide companion deck (PPTX)', 'Bonus swipe files', 'Instant download • lifetime access'].map((item) => <li key={item} className="flex items-center gap-3"><Check size={15} className="text-[var(--gold)]" />{item}</li>)}</ul>
                 <button onClick={() => handleCheckout('personal')} data-testid="button-buy-personal" className="btn-gold mt-9 flex w-full items-center justify-between px-5 py-4 text-xs font-bold uppercase tracking-[.15em]">Get Instant Access <ArrowRight size={16} /></button>
               </div>
-              <div className="pricing-card reveal reveal-delay-2 relative border-2 border-[var(--gold)] bg-[#f5f1e7] p-7 text-[var(--navy)] sm:p-9">
+              <div className="pricing-card group reveal reveal-delay-2 relative overflow-hidden border-2 border-[var(--gold)] bg-[#f5f1e7] p-7 text-[var(--navy)] sm:p-9">
                 <span className="absolute right-6 top-0 -translate-y-1/2 bg-[var(--gold)] px-3 py-1.5 text-[9px] font-bold uppercase tracking-[.18em]">Most popular — it can pay for itself</span>
+                 <div className="relative -mx-7 -mt-7 mb-7 h-44 overflow-hidden sm:-mx-9 sm:-mt-9 sm:h-48">
+                   <img src="/stage-master-reseller.jpg" alt="Laptop and ready-to-sell reseller materials" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/85 via-[var(--navy)]/10 to-transparent" />
+                   <span className="absolute bottom-4 left-5 text-[9px] font-bold uppercase tracking-[.18em] text-white">Course + sell-it-yourself toolkit</span>
+                 </div>
                 <div className="flex items-start justify-between"><div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[var(--blue)]">Master it — then sell it as your own and keep 100%.</p><h3 className="mt-4 text-2xl font-bold">Reseller Rights</h3></div><Sparkles className="text-[var(--blue)]" size={21} /></div>
                 <div className="mt-7 flex items-end gap-2"><span className="text-6xl font-extrabold">$147</span><span className="pb-2 text-sm text-slate-500">one-time, not monthly</span></div>
                 <ul className="mt-7 space-y-3 border-t border-[var(--navy)]/15 pt-6 text-sm">{['Everything in Personal Use', 'Full Reseller Rights license', 'Sell on Whop, Gumroad, Stan Store & more', 'Keep 100% of every sale — no royalties', 'Done-for-you sales page copy', '7-email buyer sequence to plug in', 'Set your own price, forever'].map((item) => <li key={item} className="flex items-center gap-3"><Check size={15} className="text-[var(--green)]" />{item}</li>)}</ul>
